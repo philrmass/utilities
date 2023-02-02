@@ -1,0 +1,10 @@
+{
+  "name": "utilities",
+  "version": "0.1.0",
+  "description": "Javascript utilities",
+  "main": "index.js",
+  "repository": "https://github.com/philrmass/utilities.git",
+  "author": "Phil Mass",
+  "license": "MIT",
+  "private": false
+}
