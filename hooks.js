@@ -38,3 +38,21 @@ export function useLocalStorage(key, initialValue) {
 
   return [value, setValue];
 }
+
+export function useVisibility() {
+  const [isVisible, setIsVisible] = useState(document.visibilityState === 'visible');
+
+  const handleChange = useCallback(() => {
+    setIsVisible(document.visibilityState === 'visible');
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener('visibilitychange', handleChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleChange);
+    };
+  }, [handleChange]);
+
+  return isVisible;
+}
