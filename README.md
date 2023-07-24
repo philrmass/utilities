@@ -10,4 +10,5 @@ yarn add https://github.com/philrmass/utilities#v0.4.0
 After committing and pushing the changes to `main`
 ```
 git tag -a "v0.4.0" -m "add file utilities"
+git push origin v0.4.0
 ```
