@@ -1,4 +1,4 @@
-function move(arr, from, to) {
+export function move(arr, from, to) {
   if (to < from) {
     const a = arr.slice(0, to);
     const b = arr.slice(to, from);
@@ -17,4 +17,3 @@ function move(arr, from, to) {
 
   return arr;
 }
-
