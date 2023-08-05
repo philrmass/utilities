@@ -4,7 +4,7 @@ export function saveJsonFile(filePath, data) {
 
 export function loadJsonFile() {
   return new Promise((resolve) => {
-    loadTextFile(filePath).then((text) => resolve(JSON.parse(text)));
+    loadTextFile().then((text) => resolve(JSON.parse(text)));
   });
 }
 
