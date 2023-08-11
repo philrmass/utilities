@@ -1,6 +1,6 @@
 {
   "name": "utilities",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Javascript utilities",
   "type": "module",
   "main": "index.js",
