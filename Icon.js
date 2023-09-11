@@ -5,6 +5,7 @@ const svgsByName = {
   caretUp: <path d="M50 30 l25 25 l-5 5 l-21 -21 l-21 21 l-5 -5" />,
   children: <path d="M10 25 h80 v6 h-50 l5 10 h45 v6 h-42 l5 10 h37 v6 h-40.8 l-16 -32 h-23.2 v-6" />,
   cross: <path d="M55 50 l16 -16 l-5 -5 l-16 16 l-16 -16 l-5 5 l16 16 l-16 16 l5 5 l16 -16 l16 16 l5 -5 l-16 -16" />,
+  flat: <path d="M50 53.5 h25 v-7 h-52 v7" />,
   menu: <path d="M25 31 h50 v6 h-50 v-6 M25 47 h50 v6 h-50 v-6 M25 63 h50 v6 h-50 v-6" />,
   next: <path d="M70 20 v60 h15 v-60 M15 20 L15,80 L60,50" />,
   pause: <path d="M25 20 v60 h15 v-60 M75 20 v60 h-15 v-60" />,
