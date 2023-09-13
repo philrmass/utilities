@@ -77,8 +77,8 @@ export function getScaleRatios(lastTouches, touches) {
   const lastIds = lastTouches.map((last) => last.id);
   const matched = touches.filter((touch) => lastIds.includes(touch.id));
 
-  [x, xCenter] = getScaleAndCenter(lastTouches, matched, 'x', w);
-  [y, yCenter] = getScaleAndCenter(lastTouches, matched, 'y', h);
+  const [x, xCenter] = getScaleAndCenter(lastTouches, matched, 'x', w);
+  const [y, yCenter] = getScaleAndCenter(lastTouches, matched, 'y', h);
 
   return { x, xCenter, y, yCenter };
 }
