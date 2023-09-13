@@ -49,3 +49,36 @@ export function getMoveRatios(lastTouches, touches) {
     y: yRatio,
   };
 }
+
+function getScaleAndCenter(lastTouches, matched, axis, range) {
+  if (matched.length >= 2) {
+    const min = matched.reduce((min, item) => item[axis] < min[axis] ? item : min, matched[0]);
+    const max = matched.reduce((max, item) => item[axis] > max[axis] ? item : max, matched[0]);
+    const dist = max[axis] - min[axis];
+
+    const lastMax = lastTouches.find((last) => last.id === max.id);
+    const lastMin = lastTouches.find((last) => last.id === min.id);
+    const lastDist = lastMax[axis] - lastMin[axis];
+
+    if (lastDist > 0) {
+      const scale = dist / lastDist;
+      const center = (min[axis] + max[axis]) / 2;
+
+      return [scale, center / range];
+    }
+  }
+
+  return [1.0, 0.5];
+}
+
+export function getScaleRatios(lastTouches, touches) {
+  const w = touches[0].w;
+  const h = touches[0].h;
+  const lastIds = lastTouches.map((last) => last.id);
+  const matched = touches.filter((touch) => lastIds.includes(touch.id));
+
+  [x, xCenter] = getScaleAndCenter(lastTouches, matched, 'x', w);
+  [y, yCenter] = getScaleAndCenter(lastTouches, matched, 'y', h);
+
+  return { x, xCenter, y, yCenter };
+}
