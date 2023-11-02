@@ -11,6 +11,20 @@ export function getTouches(e) {
   }));
 }
 
+export function getPositions(touches) {
+  const sums = touches.reduce(({ sumX, sumY }, { x, y }) => ({
+    sumX: sumX + x,
+    sumY: sumY + y,
+  }), { sumX: 0, sumY: 0 });
+
+  const divisor = touches.length || 1;
+
+  return {
+    x: sums.sumX / divisor,
+    y: sums.sumY / divisor,
+  };
+}
+
 function getDiffs(lastTouches, touches) {
   return touches.reduce((diffs, touch) => {
     const match = lastTouches.find((last) => last.id === touch.id);
