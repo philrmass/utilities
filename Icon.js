@@ -14,8 +14,8 @@ const svgsByName = {
   previous: <path d='M15 20 v60 h15 v-60 M85 20 L85 80 L40 50' />,
   random: (
     <g>
-      <path d="M10 66 h25 l25 -25 h18 v4 l14 -7.5 l-14 -7.5 v4 h-21 l-25 25 h-22" />
-      <path d="M10 34 h25 l25 25 h18 v-4 l14 7.5 l-14 7.5 v-4 h-21 l-25 -25 h-22" />
+      <path d="M10 80 h25 l25 -53 h18 v4 l14 -7.5 l-14 -7.5 v4 h-22 l-25 53 h-22" />
+      <path d="M10 20 h25 l25 53 h18 v-4 l14 7.5 l-14 7.5 v-4 h-22 l-25 -53 h-22" />
     </g>
   ),
   revert: (
