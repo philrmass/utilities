@@ -12,6 +12,12 @@ const svgsByName = {
   play: <path d="M20 15 L20 80 L80 50" />,
   plus: <path d="M53 53 v14 h-6 v-14 h-14 v-6 h14 v-14 h6 v14 h14 v6 h-14" />,
   previous: <path d='M15 20 v60 h15 v-60 M85 20 L85 80 L40 50' />,
+  random: (
+    <g>
+      <path d="M10 66 h25 l25 -25 h18 v4 l14 -7.5 l-14 -7.5 v4 h-21 l-25 25 h-22" />
+      <path d="M10 34 h25 l25 25 h18 v-4 l14 7.5 l-14 7.5 v-4 h-21 l-25 -25 h-22" />
+    </g>
+  ),
   revert: (
     <g transform="translate(50 50) rotate(-135 0 0)">
       <path d="M25 0 A25 25 0 1 1 0 -25 v6 A19 19 0 1 0 19 0 h-10 l13 -13 l13 13 h10" />
@@ -22,6 +28,15 @@ const svgsByName = {
       M 62 62 l 2.8 -.8 l 28 28 l -5.6 5.6 l -28 -28' />
   ),
   up: <path d="M50 25 l25 25 l-5 5 l-21 -21 l-21 21 l-5 -5 M52 27 v50 h-6 v-50" />,
+  upDown: (
+    <g>
+      <path d="M50 90 l25 -25 l-5 -5 l-21 21" />
+      <path d="M50 90 l-25 -25 l5 -5 l21 21" />
+      <path d="M50 10 l25 25 l-5 5 l-21 -21" />
+      <path d="M50 10 l-25 25 l5 5 l21 -21" />
+      <path d="M46.5 20 h7 v60 h-7" />
+    </g>
+  ),
 };
 
 function getIconSvg(name) {
